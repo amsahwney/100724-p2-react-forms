@@ -1,10 +1,8 @@
 import { useState } from "react"
 // in the future we will get our data in a different way from the database...
-import { employeesArray } from "../../data/employees-array"
 import EmployeeCard from "./EmployeeCard"
 
-function EmployeeContainer() {
-    const [employees, setEmployees] = useState( employeesArray )
+function EmployeeContainer( {employees, setEmployees} ) {
 
     const mappedEmployees = employees.map(emp => <EmployeeCard key={emp.id} employee={emp} />)
 
